@@ -35,12 +35,12 @@ a {
 
 .principal-header {
     display: grid;
-    height:80px;
+    height:70px;
     width: 100%;
     position: fixed;
     grid-template-columns: 25% 75%;
     grid-template-areas: "logo nav";
-    background-color: #14330b;
+    background-color: #14330be7;
     -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
@@ -54,12 +54,12 @@ a {
 }
 
 .icon-genovinos {
-    width:280px;
+    width:250px;
     transition: 0.3s;
 }
 
 .icon-genovinos:hover{
-    width: 290px;
+    width: 260px;
     transition: 0.3s;
 }
 
@@ -82,6 +82,7 @@ a {
 
 ul li a {
     font-weight: bold;
+    font-size: 18px;
 }
 
 .home-container {
@@ -205,20 +206,15 @@ ul li a {
     display: grid;
     justify-content: center;
     align-content: center;
+    transition: 0.5s;
 }
 
 .symbol-img {
     width: 40px;
-    transition: 0.3s;
-}
-
-.symbol-img:hover{
-    padding-top: 20px;
-    transition: 0.3s;
 }
 
 .general-container {
-    padding-top: 40px;
+    padding-top: 25px;
     grid-area: general;
     background-color: #205312;
     display:grid;
@@ -383,9 +379,10 @@ ul li a {
 
 .symbol-general-component{
     grid-area:symbol-gen;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     display: grid;
     justify-content: center;
+    transition: 0.5s;
 }
 
 .objectives-container{
@@ -471,7 +468,8 @@ ul li a {
     width: 400px;
     padding-left: 30px;
     text-align: justify;
-    border-left: 5px solid #205312;
+    border-left: 6px solid #205312;
+    border-radius: 12px;
 }
 
 .img-objectives-component{
@@ -497,17 +495,18 @@ ul li a {
     padding-bottom: 20px;
     display: grid;
     justify-content: center;
+    transition: 0.5s;
 }
 
 .portfolio-container{
-    padding: 60px 40px 0px;
+    padding: 40px 40px 0px;
     display: grid;
     grid-area: portfolio;
     grid-gap: 40px;
     justify-content: center;
     background-color: #205312;
-    grid-template-columns: repeat(3,400px);
-    grid-template-rows: auto repeat(2,280px) auto;
+    grid-template-columns: repeat(3,280px);
+    grid-template-rows: auto repeat(2,180px) auto;
     grid-template-areas: 
             "title-port     title-port      title-port"
             "item-port-1    item-port-2     item-port-3"
@@ -543,16 +542,16 @@ ul li a {
 }
 
 .img-portfolio {
-    width: 380px;
-    height: 250px;
+    width: 280px;
+    height: 180px;
     border: 10px solid #fff;
     border-radius: 15px;
     transition: 0.3s;
 }
 
 .img-portfolio:hover {
-    width: 390px;
-    height: 260px;
+    width: 290px;
+    height: 190px;
     transition: 0.3s;
 }
 
@@ -592,22 +591,212 @@ ul li a {
     justify-content: center;
 }
 
-.symbol-decorate-component{
+.symbol-portfolio-component{
     padding-bottom: 20px;
     grid-area: symbol-port;
     display: grid;
     justify-content: center;
+    transition: 0.5s;
 }
 
+.contact-services-container {
+    display: grid;
+    grid-area: contact-services;
+    justify-content: center;
+    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+            "contact     services";
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.contact-component {
+    padding-top: 20px;
+    grid-area:contact;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:  auto 200px auto;
+    grid-template-areas: 
+        "contact-title"
+        "contact-info"
+        "contact-site";
+    grid-gap: 10px;
+    justify-content: center;
+    -webkit-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.title-contact-section {
+    grid-area:contact-title;
+    display: grid;
+    justify-content: center;
+}
+
+.title-contact-section h1 {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.title-contact-section > hr {
+    width: 380px;
+    height: 0px;
+    border: 3px solid #205312;
+    border-radius: 15px;
+}
+
+.info-contact-section {
+    grid-area:contact-info;
+    display: grid;
+    grid-gap: 15px;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: 
+        "email"
+        "phone"
+        "map";
+    border-bottom: 1px solid rgba(238, 238, 238, 0.863);
+}
+
+.icon-email .icon-asset, .icon-phone .icon-asset, .icon-address .icon-asset {
+    width: 50px;
+    transition: 0.3s;
+}
+
+.icon-email .icon-asset:hover, .icon-phone .icon-asset:hover, .icon-address .icon-asset:hover {
+    transition: 0.3s;
+    width: 60px;
+}
+
+.email-contact-item {
+    grid-area:email;
+    display: grid;
+    align-content: center;
+    grid-gap:20px;
+    grid-template-rows: auto;
+    grid-template-columns: 0.2fr auto;
+    grid-template-areas: "icon-email info-email";
+}
+
+.icon-email  {
+    grid-area: icon-email;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.info-email {
+    grid-area: info-email;
+    display: grid;
+    align-content: center;
+}
+
+.info-email h4,.info-phone h4,.info-address h4 {
+    color: #14330b;
+    transition: 0.3s;
+}
+
+.info-email h4:hover,.info-phone h4:hover,.info-address h4:hover{
+    color: #205312;
+    transition: 0.3s;
+    font-size:20px;
+    cursor: pointer;
+}
+
+.phone-contact-item {
+    grid-area:phone;
+    display: grid;
+    grid-gap:20px;
+    align-content: center;
+    grid-template-rows: auto;
+    grid-template-columns: 0.2fr auto;
+    grid-template-areas: "icon-phone info-phone";
+}
+
+.icon-phone  {
+    grid-area: icon-phone;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.info-phone {
+    grid-area: info-phone;
+    display: grid;
+    align-content: center;
+}
+
+.address-contact-item {
+    grid-area:map;
+    display: grid;
+    align-content: center;
+    grid-gap: 20px;
+    grid-template-rows: auto;
+    grid-template-columns: 0.2fr 300px;
+    grid-template-areas: "icon-address info-address";
+}
+
+.icon-address {
+    grid-area: icon-address;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.info-address {
+    grid-area: info-address;
+    display: grid;
+    align-content: center;
+}
+
+.site-map-section {
+    grid-gap: contact-site;
+    display: grid;
+    justify-content: center;
+    margin: 10px 0px 25px;
+}
+
+.symbol-general-component:hover, 
+.symbol-homeInfo-component:hover, 
+.symbol-objectives-component:hover,
+.symbol-portfolio-component:hover {
+    margin-bottom:10px;
+    transition: 0.5s;
+} 
+
+.services-component {
+    padding-top: 20px;
+    grid-area:services;
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas: 
+        "services-title     services-title"
+        "contact-info"
+        "contact-site";
+    grid-gap: 10px;
+    justify-content: center;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+}
 
 .footer-component {
     background-color: #14330b;
     display: grid;
-    grid-gap: 10px;
-    padding: 10px;
+    grid-gap: 2px;
+    padding: 5px;
     justify-content: center;
     grid-template-columns: auto;
-    grid-template-rows: repeat(2,50%);
+    grid-template-rows: repeat(2,auto);
     grid-template-areas: 
         "genovinos"
         "copyright";
@@ -620,7 +809,7 @@ ul li a {
 }
 
 .genovinos-section img {
-    width:200px;
+    width:130px;
 }
 
 .copyright-section {
@@ -629,12 +818,11 @@ ul li a {
     justify-content: center;
 }
 
-.copyright-section h4 {
+.copyright-section  p {
     color: #fff;
+    font-size: 14px;
     text-align: center;
 }
-
-
 
 
 
