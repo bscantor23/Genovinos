@@ -4,7 +4,7 @@
 
 html, body {
     height: 100vh;
-    width: 100vw;
+    width: 99%;
     font-family: 'Roboto';
     letter-spacing: 1px;
     font-size: 18px;
@@ -23,7 +23,7 @@ a {
 .container {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 680px repeat(6, auto);
+    grid-template-rows: 680px repeat(5, auto);
     grid-template-areas:    
         "home"
         "infoHome"
@@ -31,7 +31,7 @@ a {
         "objectives"
         "portfolio"
         "contact-services";
-    width: inherit;
+    width: 102%;
 }
 
 .principal-header {
@@ -767,17 +767,20 @@ ul li a:hover {
 .site-map-section {
     grid-gap: contact-site;
     display: grid;
-    justify-content: center;
-    margin: 10px 0px 25px;
+    border-radius: 15px;
     border: 5px solid #205312;
     border-radius: 15px;
-    width:auto;
-    height:170px;
+    margin-bottom: 20px;
 }
 
 .site-map-section iframe {
     border: 5px solid #205312;
     border-radius: 15px;
+    height:auto;
+}
+
+.img-map {
+    width: 100%;
 }
 
 .symbol-general-component:hover, 
@@ -830,6 +833,16 @@ ul li a:hover {
     display: grid;
     align-content: center;
     justify-content: center;
+    transition: 0.3s;
+}
+
+.button-connection:hover {
+    color: #205312;
+    padding: 6px 50px;
+    font-size: 22px;
+    background-color: #fff;
+    border: 5px solid #205312;
+    transition: 0.3s;
 }
 
 .text-services-section {
@@ -857,6 +870,7 @@ ul li a:hover {
     display: grid;
     grid-gap: 2px;
     padding: 5px;
+    width: 101.3%;
     justify-content: center;
     grid-template-columns: auto;
     grid-template-rows: repeat(2,auto);
