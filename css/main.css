@@ -1,0 +1,261 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    font-family: 'Roboto';
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+p {
+    line-height: 30px;
+}
+
+a {
+    color: #fff;
+    font-size:20px;
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 680px 350px repeat(4,1024px) 256px;
+    grid-template-areas:    
+        "home"
+        "infoHome"
+        "general"
+        "objectives"
+        "portfolio"
+        "contact-services"
+        "footer";
+}
+
+.principal-header {
+    display: grid;
+    height:80px;
+    width: 100%;
+    position: fixed;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: "logo nav";
+    background-color: #205312;
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.logo-genovinos {
+    display: grid;
+    grid-area: logo;
+    justify-content: center;
+    align-content: center;
+}
+
+.icon-genovinos {
+    width:280px;
+}
+
+.nav {
+    grid-area:nav;
+    display: grid;
+    align-content: center;
+}
+
+.nav ul {
+    padding:0;
+    width:inherit;
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    justify-content: space-evenly;
+    align-content: center;
+    text-align: center;
+    list-style: none;
+}
+
+ul li a {
+    font-weight: bold;
+}
+
+.home-container {
+    width: 100%;
+    grid-area: home;
+    background-image: url("../img/portfolio/background-img.png");
+    background-size: cover;
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.home-component {
+    margin-top: 80px;
+    padding-top: 50px;
+    display: grid;
+    align-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 350px 30px 100px;
+    grid-template-areas: 
+        "img-home"
+        "decorate-home"
+        "title-home";
+}
+
+.img-home-section {
+    grid-area: img-home;
+    display: grid;
+    justify-content: center;
+}
+
+.decoration-section {
+    grid-area: decorate-home;
+    display: grid;
+    justify-content: center;
+}
+
+.title-home-section {
+    grid-area: title-home;
+    display: grid;
+    justify-content: center;
+}
+
+.title-home-section h1 {
+    color:#fff;
+    font-weight: bold;
+    font-size: 35px;
+    width: 600px;
+    text-align: center;
+}
+
+.principal-img {
+    width: 300px;
+}
+
+.principal-decorate {
+    width: 400px;
+}
+
+.homeInfo-container{
+    padding: 40px 40px 0px;
+    display: grid;
+    grid-area: infoHome;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 120px 80px;
+    grid-template-areas: 
+            "title-info"
+            "paragraph-info"
+            "symbol-info";
+    
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.title-homeInfo-component{
+    grid-area: title-info;
+    display: grid;
+    justify-content: center;
+}
+
+.title-homeInfo-component h1 {
+    text-align: center;
+}
+
+.title-homeInfo-component > hr {
+    width: 800px;
+    height: 0%;
+    border: 5px solid #205312;
+    border-radius: 15px;
+}
+
+.paragraph-homeInfo-component {
+    grid-area: paragraph-info;
+    display: grid; 
+    justify-content: center;
+}
+
+.paragraph-homeInfo-component p {
+    display: grid;   
+    justify-content: center;
+    text-align: center;
+    width: 800px;
+}
+
+.symbol-homeInfo-component {
+    grid-area: symbol-info;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.symbol-homeInfo-component img {
+    width: 40px;
+}
+
+.general-container {
+    padding-top: 30px;
+    background-color: #205312;
+    display:grid;
+    grid-area: general;
+    grid-template-columns: repeat(3,fr);
+    grid-template-rows:100px 500px 80px;
+    grid-template-areas: 
+        "title-gen  title-gen   title-gen"
+        "mission    img-gen     vision"
+        "symbol-gen symbol-gen  symbol-gen";
+    grid-gap:30px;    
+}
+
+.title-general-component {
+    grid-area: title-gen;
+    display: grid;
+    justify-content: center;
+}
+
+.title-general-component h1{
+    color:#fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.title-general-component > hr {
+    width: 800px;
+    height: 0%;
+    border: 5px solid #fff;
+    border-radius: 15px;
+}
+
+.mission-component{
+    grid-area: mission;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 80px 80px 200px;
+    grid-template-areas: 
+        "mission-title"
+        "mission-icon"
+        "mission-decoration"
+        "mission-paragraph";
+}
+
+
+
+
+
+.img-general-component{
+    grid-area:img-gen;
+}
+
+.vision-component{
+    grid-area:vision;
+}
+
+.symbol-general-component{
+    grid-area:symbol-gen;
+}
+
+
+
+
+
+
+
+
+
+
+
